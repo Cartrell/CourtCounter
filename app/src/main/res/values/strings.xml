@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Court Counter</string>
+
+    <string name="team_name_blue_circles">Blue Circles</string>
+    <string name="team_name_green_triangles">Green Triangles</string>
+    <string name="team_name_red_squares">Red squares</string>
+    <string name="team_name_yellow_stars">Yellow Stars</string>
+    <string name="team_position_defense">defense</string>
+    <string name="team_position_offense">at bat</string>
+
+    <string name="hits">hits: %1$d</string>
+    <string name="strikes">strikes: %1$d</string>
+    <string name="balls">balls: %1$d</string>
+    <string name="outs">outs: %1$d</string>
+
+    <string name="grand_slam">grand\nslam!</string>
+    <string name="home_run">home\nrun</string>
+    <string name="out_at_1st">out at\n1st</string>
+    <string name="out_at_2nd">out at\n2nd</string>
+    <string name="out_at_3rd">out at\n3rd</string>
+    <string name="new_game">new game</string>
+    <string name="strike">strike</string>
+    <string name="foul">foul</string>
+    <string name="ball">ball</string>
+    <string name="out_at_bat">out at\nbat</string>
+    <string name="single_hit">single</string>
+    <string name="double_hit">double</string>
+    <string name="triple_hit">triple</string>
+    <string name="steal_2nd">steal\n2nd</string>
+    <string name="steal_3rd">steal\n3rd</string>
+    <string name="steal_home">steal\nhome</string>
+</resources>
