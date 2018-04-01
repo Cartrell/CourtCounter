@@ -14,19 +14,27 @@
     <string name="outs">outs: %1$d</string>
 
     <string name="grand_slam">grand\nslam!</string>
-    <string name="home_run">home\nrun</string>
-    <string name="out_at_1st">out at\n1st</string>
-    <string name="out_at_2nd">out at\n2nd</string>
-    <string name="out_at_3rd">out at\n3rd</string>
+    <string name="home_run">homer</string>
+    <string name="out_at_1st">out 1st</string>
+    <string name="out_at_2nd">out 2nd</string>
+    <string name="out_at_3rd">out 3rd</string>
     <string name="new_game">new game</string>
     <string name="strike">strike</string>
     <string name="foul">foul</string>
     <string name="ball">ball</string>
-    <string name="out_at_bat">out at\nbat</string>
+    <string name="out_at_bat">K</string>
     <string name="single_hit">single</string>
     <string name="double_hit">double</string>
     <string name="triple_hit">triple</string>
-    <string name="steal_2nd">steal\n2nd</string>
-    <string name="steal_3rd">steal\n3rd</string>
-    <string name="steal_home">steal\nhome</string>
+    <string name="steal_2nd">st 2nd</string>
+    <string name="steal_3rd">st 3rd</string>
+    <string name="steal_home">st hm</string>
+
+    <string name="runners_singular">There is a runner on %1$s.</string>
+    <string name="runners_plural">Runners are on %1$s and %2$s.</string>
+    <string name="runners_all">Bases are loaded.</string>
+    <string name="runners_none">No runners are on base.</string>
+    <string name="runners_first">first</string>
+    <string name="runners_second">second</string>
+    <string name="runners_third">third</string>
 </resources>

@@ -4,7 +4,6 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.android.courtcounter.databinding.ActivityMainBinding;
@@ -319,10 +318,17 @@ public class MainActivity extends AppCompatActivity {
   }
 
   //===========================================================================
+  // areRunnersOn
+  //===========================================================================
+  private boolean areRunnersOn(int runnerOnFlags) {
+    return((m_runnersOn & runnerOnFlags) == runnerOnFlags);
+  }
+
+  //===========================================================================
   // areBasesLoaded
   //===========================================================================
   private boolean areBasesLoaded() {
-    return((m_runnersOn & RUNNER_ALL) == RUNNER_ALL);
+    return(areRunnersOn(RUNNER_ALL));
   }
 
   //===========================================================================
@@ -360,21 +366,21 @@ public class MainActivity extends AppCompatActivity {
   // isRunnerOnFirst
   //===========================================================================
   private boolean isRunnerOnFirst() {
-    return((m_runnersOn & RUNNER_ON_FIRST) == RUNNER_ON_FIRST);
+    return(areRunnersOn(RUNNER_ON_FIRST));
   }
 
   //===========================================================================
   // isRunnerOnSecond
   //===========================================================================
   private boolean isRunnerOnSecond() {
-    return((m_runnersOn & RUNNER_ON_SECOND) == RUNNER_ON_SECOND);
+    return(areRunnersOn(RUNNER_ON_SECOND));
   }
 
   //===========================================================================
   // isRunnerOnThird
   //===========================================================================
   private boolean isRunnerOnThird() {
-    return((m_runnersOn & RUNNER_ON_THIRD) == RUNNER_ON_THIRD);
+    return(areRunnersOn(RUNNER_ON_THIRD));
   }
 
   //===========================================================================
@@ -491,9 +497,45 @@ public class MainActivity extends AppCompatActivity {
   private void setRunnersOn(int runnersOnAdd, int runnersOnRemove) {
     m_runnersOn |= runnersOnAdd;
     m_runnersOn &= ~runnersOnRemove;
-    showRunnersImage(m_binding.imgRunners1, RUNNER_ON_FIRST);
-    showRunnersImage(m_binding.imgRunners2, RUNNER_ON_SECOND);
-    showRunnersImage(m_binding.imgRunners3, RUNNER_ON_THIRD);
+
+    String format;
+
+    if (areBasesLoaded()) {
+      //check for bases loaded first
+      format = getResources().getText(R.string.runners_all).toString();
+    } else if (m_runnersOn == RUNNER_NONE) {
+      //bases are not loaded, next check if bases are empty
+      format = getResources().getText(R.string.runners_none).toString();
+    } else {
+      //we have either one or two runners on base
+
+      //add all the runners on a base to to this array
+      ArrayList<String> runners = new ArrayList<>();
+      if (isRunnerOnFirst()) {
+        runners.add(getResources().getText(R.string.runners_first).toString());
+      }
+
+      if (isRunnerOnSecond()) {
+        runners.add(getResources().getText(R.string.runners_second).toString());
+      }
+
+      if (isRunnerOnThird()) {
+        runners.add(getResources().getText(R.string.runners_third).toString());
+      }
+
+      //assign the correct format message depending on if there are one or two runners on base
+      if (runners.size() == 1) {
+        //there is only one runner on base
+        format = String.format(getResources().getText(R.string.runners_singular).toString(),
+          runners.get(0));
+      } else {
+        //there are two runners on base
+        format = String.format(getResources().getText(R.string.runners_plural).toString(),
+          runners.get(0), runners.get(1));
+      }
+    }
+
+    m_binding.txtRunnersOn.setText(format);
   }
 
   //===========================================================================
@@ -512,17 +554,6 @@ public class MainActivity extends AppCompatActivity {
   //===========================================================================
   private void setTextFromInt(TextView textView, int value) {
     textView.setText(String.valueOf(value));
-  }
-
-  //===========================================================================
-  // showRunnersImage
-  //===========================================================================
-  private void showRunnersImage(ImageView imgRunners, int runnersOnFlag) {
-    if ((m_runnersOn & runnersOnFlag) == runnersOnFlag) {
-      imgRunners.setVisibility(View.VISIBLE);
-    } else {
-      imgRunners.setVisibility(View.INVISIBLE);
-    }
   }
 
   //===========================================================================

@@ -9,200 +9,207 @@
         android:orientation="horizontal"
         tools:context="com.example.android.courtcounter.MainActivity">
 
+        <!-- ==================================== -->
+        <!-- background image -->
+        <!-- ==================================== -->
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
             android:src="@drawable/background" />
 
+        <!-- ==================================== -->
+        <!-- container for remaining ui -->
+        <!-- ==================================== -->
         <LinearLayout
-            android:id="@+id/players_layouts"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/txt_team1_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Team name"
-                    android:textColor="#ffffff"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-
-                <ImageView
-                    android:id="@+id/img_team1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="60dp"
-                    android:layout_marginRight="60dp"
-                    android:layout_marginTop="8dp"
-                    android:adjustViewBounds="true"
-                    android:src="@drawable/blue_circles" />
-
-                <TextView
-                    android:id="@+id/txt_team1_score"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="00"
-                    android:textColor="#ffffff"
-                    android:textSize="72sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/txt_team1_position"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/team_position_offense"
-                    android:textAllCaps="true"
-                    android:textColor="#ffffff"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/txt_team1_hits"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/hits"
-                    android:textAllCaps="true"
-                    android:textColor="#ffffff"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal"
-                android:background="#ffffff"></View>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/txt_team2_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Team name"
-                    android:textColor="#ffffff"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-
-                <ImageView
-                    android:id="@+id/img_team2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="60dp"
-                    android:layout_marginRight="60dp"
-                    android:layout_marginTop="8dp"
-                    android:adjustViewBounds="true"
-                    android:src="@drawable/blue_circles" />
-
-                <TextView
-                    android:id="@+id/txt_team2_score"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="00"
-                    android:textColor="#ffffff"
-                    android:textSize="72sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/txt_team2_position"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/team_position_defense"
-                    android:textAllCaps="true"
-                    android:textColor="#ffffff"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/txt_team2_hits"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/hits"
-                    android:textAllCaps="true"
-                    android:textColor="#ffffff"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <ImageView
-            android:id="@+id/img_field"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@id/play_buttons"
-            android:layout_below="@id/players_layouts"
-            android:layout_centerHorizontal="true"
-            android:layout_marginHorizontal="120dp"
-            android:adjustViewBounds="true"
-            android:src="@drawable/field" />
-
-        <ImageView
-            android:id="@+id/img_runners1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@id/play_buttons"
-            android:layout_below="@id/players_layouts"
-            android:layout_centerHorizontal="true"
-            android:layout_marginHorizontal="120dp"
-            android:adjustViewBounds="true"
-            android:src="@drawable/runners_1" />
-
-        <ImageView
-            android:id="@+id/img_runners2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@id/play_buttons"
-            android:layout_below="@id/players_layouts"
-            android:layout_centerHorizontal="true"
-            android:layout_marginHorizontal="120dp"
-            android:adjustViewBounds="true"
-            android:src="@drawable/runners_2" />
-
-        <ImageView
-            android:id="@+id/img_runners3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@id/play_buttons"
-            android:layout_below="@id/players_layouts"
-            android:layout_centerHorizontal="true"
-            android:layout_marginHorizontal="120dp"
-            android:adjustViewBounds="true"
-            android:src="@drawable/runners_3" />
-
-        <LinearLayout
-            android:id="@+id/play_buttons"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@id/btn_new_game"
-            android:layout_centerHorizontal="true"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
+            <!-- ==================================== -->
+            <!-- both player layouts -->
+            <!-- ==================================== -->
+            <LinearLayout
+                android:id="@+id/players_layouts"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="30"
+                android:orientation="horizontal"
+                >
+
+                <!-- ==================================== -->
+                <!-- left player layout -->
+                <!-- ==================================== -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_team1_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Team name"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/img_team1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/blue_circles"
+                        android:padding="24dp"/>
+
+                    <TextView
+                        android:id="@+id/txt_team1_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="00"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:id="@+id/txt_team1_position"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/team_position_offense"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold"
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="1sp"
+                        android:autoSizeStepGranularity="1sp"/>
+
+                    <TextView
+                        android:id="@+id/txt_team1_hits"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/hits"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold"
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="1sp"
+                        android:autoSizeStepGranularity="1sp"/>
+                </LinearLayout>
+
+                <!-- ==================================== -->
+                <!-- players divider -->
+                <!-- ==================================== -->
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#ffffff"></View>
+
+                <!-- ==================================== -->
+                <!-- right player layout -->
+                <!-- ==================================== -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_team2_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Team name"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/img_team2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/blue_circles"
+                        android:padding="24dp"/>
+
+                    <TextView
+                        android:id="@+id/txt_team2_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="00"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:id="@+id/txt_team2_position"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/team_position_offense"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold"
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="1sp"
+                        android:autoSizeStepGranularity="1sp"/>
+
+                    <TextView
+                        android:id="@+id/txt_team2_hits"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/hits"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold"
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="1sp"
+                        android:autoSizeStepGranularity="1sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ==================================== -->
+            <!-- runners on base -->
+            <!-- ==================================== -->
+            <TextView
+                android:id="@+id/txt_runners_on"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(temp)"
+                android:textAllCaps="true"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- ==================================== -->
+            <!-- team stats (strikes, etc)-->
+            <!-- ==================================== -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/txt_strikes"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
                     android:gravity="center"
                     android:text="@string/strikes"
                     android:textAllCaps="true"
@@ -211,9 +218,10 @@
 
                 <TextView
                     android:id="@+id/txt_balls"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
                     android:gravity="center"
                     android:text="@string/balls"
                     android:textAllCaps="true"
@@ -222,9 +230,10 @@
 
                 <TextView
                     android:id="@+id/txt_outs"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
                     android:gravity="center"
                     android:text="@string/outs"
                     android:textAllCaps="true"
@@ -232,192 +241,264 @@
                     android:textStyle="bold" />
             </LinearLayout>
 
+            <!-- ==================================== -->
+            <!-- game buttons -->
+            <!-- ==================================== -->
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:orientation="vertical">
+                android:id="@+id/play_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="22"
+                android:orientation="vertical" >
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:orientation="horizontal">
+                    android:orientation="vertical">
 
-                    <Button
-                        android:id="@+id/btn_strike"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="4dp"
-                        android:background="@drawable/button_color"
-                        android:onClick="onBtnStrike"
-                        android:text="@string/strike"
-                        android:textColor="@color/button_text_color" />
-
-                    <Button
-                        android:id="@+id/btn_foul"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="4dp"
-                        android:background="@drawable/button_color"
-                        android:onClick="onBtnFoul"
-                        android:text="@string/foul"
-                        android:textColor="@color/button_text_color" />
-
-                    <Button
-                        android:id="@+id/btn_ball"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="4dp"
-                        android:background="@drawable/button_color"
-                        android:onClick="onBtnBall"
-                        android:text="@string/ball"
-                        android:textColor="@color/button_text_color" />
-
-                    <Button
-                        android:id="@+id/btn_out"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="4dp"
-                        android:background="@drawable/button_color"
-                        android:onClick="onBtnOut"
-                        android:text="@string/out_at_bat"
-                        android:textColor="@color/button_text_color" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:orientation="horizontal">
-
-                    <Button
-                        android:id="@+id/btn_single"
+                    <!-- ==================================== -->
+                    <!-- game buttons row 1 -->
+                    <!-- ==================================== -->
+                    <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_margin="4dp"
-                        android:background="@drawable/button_color"
-                        android:onClick="onBtnSingle"
-                        android:text="@string/single_hit"
-                        android:textColor="@color/button_text_color" />
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="10"
+                        android:orientation="horizontal">
 
-                    <Button
-                        android:id="@+id/btn_double"
+                        <Button
+                            android:id="@+id/btn_strike"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="4dp"
+                            android:layout_weight="10"
+                            android:background="@drawable/button_color"
+                            android:onClick="onBtnStrike"
+                            android:text="@string/strike"
+                            android:textColor="@color/button_text_color"/>
+
+                        <Button
+                            android:id="@+id/btn_foul"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="4dp"
+                            android:layout_weight="10"
+                            android:background="@drawable/button_color"
+                            android:onClick="onBtnFoul"
+                            android:text="@string/foul"
+                            android:textColor="@color/button_text_color"/>
+
+                        <Button
+                            android:id="@+id/btn_ball"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="4dp"
+                            android:layout_weight="10"
+                            android:background="@drawable/button_color"
+                            android:onClick="onBtnBall"
+                            android:text="@string/ball"
+                            android:textColor="@color/button_text_color"/>
+
+                        <Button
+                            android:id="@+id/btn_out"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="4dp"
+                            android:layout_weight="10"
+                            android:autoSizeMinTextSize="1sp"
+                            android:autoSizeStepGranularity="1sp"
+                            android:autoSizeTextType="uniform"
+                            android:background="@drawable/button_color"
+                            android:onClick="onBtnOut"
+                            android:text="@string/out_at_bat"
+                            android:textColor="@color/button_text_color"/>
+
+                    </LinearLayout>
+
+                    <!-- ==================================== -->
+                    <!-- game buttons row 2 -->
+                    <!-- ==================================== -->
+                    <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_margin="4dp"
-                        android:background="@drawable/button_color"
-                        android:onClick="onBtnDouble"
-                        android:text="@string/double_hit"
-                        android:textColor="@color/button_text_color" />
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="10"
+                        android:orientation="horizontal">
 
-                    <Button
-                        android:id="@+id/btn_triple"
+                        <Button
+                            android:id="@+id/btn_single"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="4dp"
+                            android:layout_weight="10"
+                            android:background="@drawable/button_color"
+                            android:onClick="onBtnSingle"
+                            android:text="@string/single_hit"
+                            android:textColor="@color/button_text_color" />
+
+                        <Button
+                            android:id="@+id/btn_double"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="4dp"
+                            android:layout_weight="10"
+                            android:background="@drawable/button_color"
+                            android:onClick="onBtnDouble"
+                            android:text="@string/double_hit"
+                            android:textColor="@color/button_text_color" />
+
+                        <Button
+                            android:id="@+id/btn_triple"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="4dp"
+                            android:layout_weight="10"
+                            android:background="@drawable/button_color"
+                            android:onClick="onBtnTriple"
+                            android:text="@string/triple_hit"
+                            android:textColor="@color/button_text_color" />
+
+                        <Button
+                            android:id="@+id/btn_homer"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="4dp"
+                            android:layout_weight="10"
+                            android:autoSizeMinTextSize="1sp"
+                            android:autoSizeStepGranularity="1sp"
+                            android:autoSizeTextType="uniform"
+                            android:background="@drawable/button_color"
+                            android:onClick="onBtnHomeRun"
+                            android:text="@string/home_run"
+                            android:textColor="@color/button_text_color" />
+                    </LinearLayout>
+
+                    <!-- ==================================== -->
+                    <!-- game buttons row 3 -->
+                    <!-- ==================================== -->
+                    <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_margin="4dp"
-                        android:background="@drawable/button_color"
-                        android:onClick="onBtnTriple"
-                        android:text="@string/triple_hit"
-                        android:textColor="@color/button_text_color" />
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="10"
+                        android:orientation="horizontal">
 
-                    <Button
-                        android:id="@+id/btn_homer"
+                        <Button
+                            android:id="@+id/btn_steal_2nd"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:layout_weight="10"
+                            android:autoSizeMinTextSize="1sp"
+                            android:autoSizeStepGranularity="1sp"
+                            android:autoSizeTextType="uniform"
+                            android:background="@drawable/button_color"
+                            android:onClick="onBtnStealSecond"
+                            android:text="@string/steal_2nd"
+                            android:textColor="@color/button_text_color" />
+
+                        <Button
+                            android:id="@+id/btn_steal_3rd"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:layout_weight="10"
+                            android:autoSizeMinTextSize="1sp"
+                            android:autoSizeStepGranularity="1sp"
+                            android:autoSizeTextType="uniform"
+                            android:background="@drawable/button_color"
+                            android:onClick="onBtnStealThird"
+                            android:text="@string/steal_3rd" />
+
+                        <Button
+                            android:id="@+id/btn_steal_home"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:layout_weight="10"
+                            android:autoSizeMinTextSize="1sp"
+                            android:autoSizeStepGranularity="1sp"
+                            android:autoSizeTextType="uniform"
+                            android:background="@drawable/button_color"
+                            android:onClick="onBtnStealHome"
+                            android:text="@string/steal_home"
+                            android:textColor="@color/button_text_color" />
+                    </LinearLayout>
+
+                    <!-- ==================================== -->
+                    <!-- game buttons row 4 -->
+                    <!-- ==================================== -->
+                    <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_margin="4dp"
-                        android:background="@drawable/button_color"
-                        android:onClick="onBtnHomeRun"
-                        android:text="@string/home_run"
-                        android:textColor="@color/button_text_color" />
-                </LinearLayout>
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="10"
+                        android:orientation="horizontal">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:orientation="horizontal">
+                        <Button
+                            android:id="@+id/btn_out_at_1st"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:layout_weight="10"
+                            android:autoSizeMinTextSize="1sp"
+                            android:autoSizeStepGranularity="1sp"
+                            android:autoSizeTextType="uniform"
+                            android:background="@drawable/button_color"
+                            android:onClick="onBtnOutAtFirst"
+                            android:text="@string/out_at_1st" />
 
-                    <Button
-                        android:id="@+id/btn_steal_2nd"
+                        <Button
+                            android:id="@+id/btn_out_at_2nd"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:layout_weight="10"
+                            android:autoSizeMinTextSize="1sp"
+                            android:autoSizeStepGranularity="1sp"
+                            android:autoSizeTextType="uniform"
+                            android:background="@drawable/button_color"
+                            android:onClick="onBtnOutAtSecond"
+                            android:text="@string/out_at_2nd"
+                            android:textColor="@color/button_text_color" />
+
+                        <Button
+                            android:id="@+id/btn_out_at_3rd"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:layout_weight="10"
+                            android:autoSizeMinTextSize="1sp"
+                            android:autoSizeStepGranularity="1sp"
+                            android:autoSizeTextType="uniform"
+                            android:background="@drawable/button_color"
+                            android:onClick="onBtnOutAtThird"
+                            android:text="@string/out_at_3rd"
+                            android:textColor="@color/button_text_color" />
+                    </LinearLayout>
+
+                    <!-- ==================================== -->
+                    <!-- game buttons row 5 (reset) -->
+                    <!-- ==================================== -->
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="4dp"
-                        android:background="@drawable/button_color"
-                        android:onClick="onBtnStealSecond"
-                        android:text="@string/steal_2nd"
-                        android:textColor="@color/button_text_color" />
+                        android:layout_height="0dp"
+                        android:layout_weight="10"
+                        android:gravity="center_horizontal">
+                        <Button
+                            android:id="@+id/btn_new_game"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/button_color"
+                            android:onClick="onBtnReset"
+                            android:text="@string/new_game"
+                            android:textAllCaps="true"
+                            android:textColor="@color/button_text_color"/>
 
-                    <Button
-                        android:id="@+id/btn_steal_3rd"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="4dp"
-                        android:background="@drawable/button_color"
-                        android:onClick="onBtnStealThird"
-                        android:text="@string/steal_3rd" />
-
-                    <Button
-                        android:id="@+id/btn_steal_home"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="4dp"
-                        android:background="@drawable/button_color"
-                        android:onClick="onBtnStealHome"
-                        android:text="@string/steal_home"
-                        android:textColor="@color/button_text_color" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:orientation="horizontal">
-
-                    <Button
-                        android:id="@+id/btn_out_at_1st"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="4dp"
-                        android:background="@drawable/button_color"
-                        android:onClick="onBtnOutAtFirst"
-                        android:text="@string/out_at_1st" />
-
-                    <Button
-                        android:id="@+id/btn_out_at_2nd"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="4dp"
-                        android:background="@drawable/button_color"
-                        android:onClick="onBtnOutAtSecond"
-                        android:text="@string/out_at_2nd"
-                        android:textColor="@color/button_text_color" />
-
-                    <Button
-                        android:id="@+id/btn_out_at_3rd"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="4dp"
-                        android:background="@drawable/button_color"
-                        android:onClick="onBtnOutAtThird"
-                        android:text="@string/out_at_3rd"
-                        android:textColor="@color/button_text_color" />
+                    </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-
-        <Button
-            android:id="@+id/btn_new_game"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_margin="4dp"
-            android:background="@drawable/button_color"
-            android:onClick="onBtnReset"
-            android:text="@string/new_game"
-            android:textAllCaps="true"
-            android:textColor="@color/button_text_color" />
     </RelativeLayout>
 </layout>
